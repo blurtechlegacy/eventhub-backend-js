@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var Events = require('./events');
-var Users = require('./users');
-var Tags = require('./tags');
+const express = require('express');
+const router = express.Router();
+const Events = require('./events');
+const Users = require('./users');
+const Tags = require('./tags');
 
 router.get('/', function(req, res) {
 	res.status(200).send('OK');

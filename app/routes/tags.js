@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var Tag = require('../models/tag');
+const express = require('express');
+const router = express.Router();
+const Tag = require('../models/tag');
 
 router.route('/')
 	.post(function(req, res) {
-		var tag = new Tag();
+		let tag = new Tag();
 		tag.name = req.body.name;
 		tag.save(function(err) {
 			if (err)

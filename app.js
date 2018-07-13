@@ -1,12 +1,12 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var app = express();
-var router = express.Router();
-var port = process.env.PORT || 1984;
-var routes = require('./app/routes');
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const app = express();
+const router = express.Router();
+const port = process.env.PORT || 1984;
+const routes = require('./app/routes');
 
-mongoose.connect('mongodb://<ip>:27017/event-sharing', {useNewUrlParser: true})
+mongoose.connect('mongodb://40.115.121.27:27017/event-sharing', {useNewUrlParser: true})
 
 router.use(function(req, res, next) {
 	console.log('Something is happening.');

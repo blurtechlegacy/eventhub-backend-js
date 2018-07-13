@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var User = require('../models/user');
+const express = require('express');
+const router = express.Router();
+const User = require('../models/user');
 
 router.route('/')
 	.post(function(req, res) {
-		var user = new User();
+		let user = new User();
 		user.name = req.body.name;
 		user.save(function(err) {
 			if (err)
